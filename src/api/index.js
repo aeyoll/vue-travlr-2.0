@@ -52,3 +52,22 @@ export function getTravel (slug) {
 export function getAllTravels () {
   return fetch(`travels`);
 }
+
+export function watchTravelList (cb) {
+  let first = true
+
+  const ref = api.child('travels')
+  const handler = snapshot => {
+    if (first) {
+      first = false
+    } else {
+      cb(snapshot.val())
+    }
+  }
+
+  ref.on('value', handler)
+
+  return () => {
+    ref.off('value', handler)
+  }
+}
