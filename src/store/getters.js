@@ -1,0 +1,1 @@
+export const allTravels = state => state.travels.all

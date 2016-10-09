@@ -1,0 +1,4 @@
+export const RECEIVE_TRAVELS = 'RECEIVE_TRAVELS'
+export const ADD_TRAVEL = 'ADD_TRAVEL'
+export const DELETE_TRAVEL = 'DELETE_TRAVEL'
+export const EDIT_TRAVEL = 'EDIT_TRAVEL'
